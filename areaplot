@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+year1 = [15, 13, 10, 13, 22, 36, 30, 33, 24.5, 15, 16.5, 11.2]
+year2 = [12, 17, 14, 16, 20, 27, 30, 38, 25, 18, 6, 11]
+plt.fill_between(np.arange(12), year_n_1, color="black",
+                 alpha=0.5, label='year 2007')
+plt.fill_between(np.arange(12), year_n, color="orange",
+                 alpha=0.5, label='year 2008')
+plt.title('Consumption of crude-oil(in metric tonnes) per year')
+plt.tick_params(labelsize=10)
+plt.xticks(np.arange(12), np.arange(1,13))
+plt.xlabel('Month', size=12)
+plt.ylabel('crude-oil(in metric tonnes)', size=12)
+plt.ylim(bottom=0)
+plt.legend()
+plt.savefig('areaplot.png')
